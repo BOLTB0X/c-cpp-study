@@ -1,0 +1,15 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+string solution(string my_string, vector<int> indices) {
+    string answer = "";
+    
+    for (int i = 0; i < my_string.size(); ++i) {
+        if (find(indices.begin(), indices.end(), i) == indices.end())
+            answer.push_back(my_string[i]);
+    }
+    return answer;
+}
