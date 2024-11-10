@@ -19,6 +19,10 @@
 - 일반적인 배열
   <br/>
 
+  <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/pointer2/%EB%B0%B0%EC%97%B4.png?raw=true" alt="Example Image" width="90%">
+  </div>
+
   ```c
   int arr[3] = {1, 2, 3};
 
@@ -40,6 +44,11 @@
     <br/>
 
 - 포인터 배열
+  <br/>
+
+  <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/pointer2/%ED%8F%AC%EC%9D%B8%ED%84%B0%20%EB%B0%B0%EC%97%B4.png?raw=true" alt="Example Image" width="90%">
+  </div>
   <br/>
 
   ```c
@@ -101,6 +110,10 @@
 ## Array Pointer
 
 > 배열을 가리킬 수 있는 'Pointer'
+
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/pointer2/%EB%B0%B0%EC%97%B4%20%ED%8F%AC%EC%9D%B8%ED%84%B0.png?raw=true" alt="Example Image" width="90%">
+ </div>
 
 위에서 1차원 배열(이름 자체)이 곧 -> **Array Pointer**
 
