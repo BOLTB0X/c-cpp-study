@@ -43,6 +43,13 @@ number in func : 10
 number in main : 5
 ```
 
+<br/>
+
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/argument-passing/img/%EA%B0%92.png?raw=true" alt="Example Image" width="90%">
+</div>
+<br/>
+
 - `func` 의 매개변수 `a`의 메모리 주소에 저장된 값을 `main 함수`로 넘겨주지 않고 복사만 함
   <br/>
 
@@ -83,6 +90,13 @@ int main(void)
 number in funct : 10
 number in main : 10
 ```
+
+<br/>
+
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/argument-passing/img/%EC%B2%A8%EC%A1%B0.png?raw=true" alt="Example Image" width="90%">
+</div>
+<br/>
 
 - `funct` 의 매개변수 포인터 변수 `*a`의 메모리 주소에 저장된 값을 넘겨줌 함
   <br/>
