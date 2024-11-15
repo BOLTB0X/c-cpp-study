@@ -21,7 +21,11 @@
   };
   ```
 
-  <br/>
+  <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/function%20Pointer2/img/%ED%95%A8%EC%88%98%ED%8F%AC%EC%9D%B8%ED%84%B0-%EA%B5%AC%EC%A1%B0%EC%B2%B4%EB%A7%B4%EB%B2%84.png?raw=true" alt="Example Image" width="100%">
+  </div>
+
+    <br/>
 
 - **예시**
 
@@ -60,6 +64,10 @@
   }
   ```
 
+    <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/function%20Pointer2/img/%ED%95%A8%EC%88%98%ED%8F%AC%EC%9D%B8%ED%84%B0-%EB%A7%A4%EA%B0%9C%EB%B3%80%EC%88%98.png?raw=true" alt="Example Image" width="100%">
+  </div>
+
   <br/>
 
 - **예시**
@@ -88,6 +96,10 @@
 
   }
   ```
+
+  <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/function%20Pointer2/img/%ED%95%A8%EC%88%98%ED%8F%AC%EC%9D%B8%ED%84%B0-%EB%B0%98%ED%99%98%EA%B0%92.png?raw=true" alt="Example Image" width="100%">
+  </div>
 
   <br/>
 
@@ -145,6 +157,10 @@
   ```
   typedef 반환값자료형 (*함수포인터별칭)(매개변수자료형1, 매개변수자료형2);
   ```
+
+    <div style="text-align: center;">
+  <img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/function%20Pointer2/img/%ED%95%A8%EC%88%98%ED%8F%AC%EC%9D%B8%ED%84%B0-%EB%B3%84%EC%B9%AD.png?raw=true" alt="Example Image" width="100%">
+  </div>
 
   <br/>
 
