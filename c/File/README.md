@@ -4,6 +4,10 @@
 > 구현한 프로그램과 참조할 데이터가 저장되어 있는 파일 사이에서 데이터가 이동할 수 있는 다리를 놓는 일
 > 즉 data 이동의 경로가 되는 다리를 가리켜 '스트림(stream)'
 
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/File/img/%EC%8A%A4%ED%8A%B8%EB%A6%BC.png?raw=true" alt="Example Image" width="100%">
+</div>
+
 <br/>
 
 `C` 에서 **파일 입출력 스트림**은 입출력 작업을 관리하는 data stream
@@ -93,6 +97,11 @@ int fclose(FILE* stream);
 
 <br/>
 
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/File/img/fprintf.png?raw=true" alt="Example Image" width="40%">
+</div>
+<br/>
+
 ```c
 #include <stdio.h>  // C++ 에서는 <cstdio>
 int fprintf(FILE* stream, const char* format, ...);
@@ -143,6 +152,13 @@ Hello 100
 ## fscanf
 
 > sacnf의 파일 버전인 fscanf를 사용
+
+<br/>
+
+<div style="text-align: center;">
+<img src="https://github.com/BOLTB0X/c-cpp-study/blob/main/c/File/img/fscanf.png?raw=true" alt="Example Image" width="40%">
+</div>
+<br/>
 
 ```C
 #include <stdio.h>  // C++ 에서는 <cstdio>
