@@ -5,8 +5,16 @@
 ## C
 
 - [Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer1)
+
 - [Pointer & Array](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer2)
-- [Pointer & Method]()
+
+- [Function Pointer 정의](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/function%20Pointer1)
+
+- [Function Pointer 활용](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/function%20Pointer2)
+
+- [인자 전달(Argument passing)](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/argument-passing)
+
+- [Array를 함수 인자로 전달](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Array-argument-functiong)
 
 ## C++
 
