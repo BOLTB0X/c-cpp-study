@@ -16,6 +16,8 @@
 
 - [Array를 함수 인자로 전달](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Array-argument-functiong)
 
+- [I/O, Stream, FILE](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/File)
+
 ## C++
 
 - [namespace](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/namespace)
