@@ -16,9 +16,11 @@
 
 - [Array를 함수 인자로 전달](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Array-argument-functiong)
 
-- [Double Pinter](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer3)
+- [Double Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer3)
 
 - [I/O, Stream, FILE](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/File)
+
+- [Strcut](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Struct)
 
 ## C++
 
