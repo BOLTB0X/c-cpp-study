@@ -22,8 +22,15 @@
 
 - [Strcut](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Struct)
 
+- [Struct Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Struct-Pointer#struct-pointer)
+
+
 ## C++
 
 - [namespace](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/namespace)
   
 - [lambda](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/lambda)
+
+- [Class](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs)
+
+- [Class - OOP](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs)
