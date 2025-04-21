@@ -19,6 +19,11 @@
 
    - 필요한부분만 외부로 노출될 수 있도록 하여 각 객체 고유의 독립성과 책임 영역을 안전하게 지키고자 하는 목적으로 사용
 
+
+   - **데이터와 기능을 하나로 묶고, 외부에서는 꼭 필요한 것만 접근 가능하게 하는 것**
+
+   - 클래스의 가장 기본 개념
+
 2. 키워드
 
    | 접근 지정자 | 설명 | 접근 가능 위치
@@ -120,9 +125,155 @@
 
    - 사용자에게는 함수만 보여주고, 내부 로직은 숨김
 
-3. 추상 클래스 (**Abstract Class**) 와 순수 가상 함수
+3. 자세한 것은 [추상 클래스 (**Abstract Class**) 와 순수 가상 함수 TODO]()
 
-   TODO
+## 상속 (Inheritance)
+
+> 기존 클래스를 바탕으로 새로운 클래스를 만드는 것
+
+``` cpp
+class 클래스명 {
+   // ..
+}
+class 클래스명 : 접근제한자 클래스명
+{
+   // ..
+}
+```
+
+- 클래스를 상속시키려면 상속받을 클래스 명 옆에 `:` 와 **접근 제한자** 그리고 상속할 **클래스 명** 을 붙여줌
+
+
+```cpp
+class Animal {
+public:
+    void eat(void) { 
+        cout << "먹는 중\n"; 
+    }
+};
+    
+class Dog : public Animal {
+public:
+    void bark(void) { 
+        cout << "멍멍!\n"; 
+    }
+};
+```
+
+```cpp
+dog.eat(); // 먹는 중
+dog.bark(); //  멍멍!
+```
+
+- `Dog` 클래스는 `Animal` 의 `eat()` 을 사용할 수 있음
+
+- 코드 재사용 + 확장성 향상
+
+- 자세한 것은 [상속 (Inheritance) TODO]() 참고
+
+## 다형성 (Polymorphism)
+
+> 어떤 객체의 속성이나 기능이 상황에 따라 여러 가지 형태를 가질 수 있는 성질
+
+- 객체 지향 프로그래밍의 꽃
+
+- 같은 함수가 상황에 따라 다르게 동작
+
+1. **메서드 오버로딩 (Method Overloading)**
+
+   - 정의: 하나의 클래스 안에서 같은 이름의 함수를 매개변수만 다르게 정의하는 것
+
+   - 특징
+
+      - 동일한 함수 이름
+
+      - 매개변수의 타입, 개수, 순서가 달라야 함
+
+      - 컴파일 타임(**정적 바인딩**)에서 결정됨
+
+   - ex
+
+      ```cpp
+      class Printer {
+      public:
+          void print(int num) {
+               cout << "정수: " << num << endl;
+          }
+        
+          void print(double num) {
+               cout << "실수: " << num << endl;
+          }
+    
+          void print(string text, int count) {
+               for (int i = 0; i < count; i++) {
+                    cout << "문자열: " << text << endl;
+               }
+          }
+      };
+      ```
+
+      ```cpp
+      printer.print(2); // 정수: 2
+      printer.print(2.5); // 실수: 2.5
+      printer.print("Two", 1); // 문자열: Two
+      ```
+
+      - 함수 이름은 같지만 매개변수가 다르므로 여러 함수로 인식
+
+      - **오버로딩은 클래스 내부에서 함수의 편의성을 높이기 위한 것**
+
+2. **메서드 오버라이딩 (Method Overriding)**
+
+   - 정의 : 부모 클래스의 메서드를 자식 클래스에서 *'같은 이름, 같은 시그니처'* 로 재정의하는 것
+
+   - 특징
+   
+      - 상속 관계에서만 발생
+
+      - 함수 이름, 매개변수, 반환형이 완전히 동일해야 함
+
+      - 런타임 시(**동적 바인딩**) 결정됨
+
+      - 부모의 메서드를 자식이 자기 방식대로 바꿔 쓰는 것
+
+    - ex
+
+       ```cpp
+       class Animal {
+       public:
+          virtual void eat(void) { 
+               cout << "먹는 중\n"; 
+          }
+       };
+    
+       class Dog : public Animal {
+       public:
+
+          void eat(void) override {
+               cout << "우걱우걱 " << "먹는 중\n"; 
+          }
+          void bark(void) { 
+               cout << "멍멍!\n"; 
+          }
+       };
+       ```
+
+       - `virtual` 키워드 덕분에 다형성이 적용되어 `Dog`의 `speak()` 호출
+
+       - 오버라이딩은 **동적 바인딩**을 통해 다형성을 구현하는 것
+
+3. 자세한 것은 [메서드 오버라이딩과 메서드 오버로딩 TODO]()
+
+
+## 추상 클래스 (**Abstract Class**) 와 순수 가상 함수
+
+1. **가상 함수(virtual function)**
+
+   파생 클래스에서 재정의할 것으로 기대하는 멤버 함수
+
+   ```cpp
+   virtual 멤버함수의원형;
+   ```
 
 ## 참고
 
@@ -133,3 +284,11 @@
 - [TCP스쿨 - 추상 클래스](https://tcpschool.com/cpp/cpp_polymorphism_abstract)
 
 - [위키독스 - 가상 함수](https://wikidocs.net/17144)
+
+- [블로그 참고 - 끝나지 않은 프로그래밍일기(상속(Inheritance))](https://blog.hexabrain.net/173)
+
+- [위키 독스 - 클래스(class)와 객체(object)](https://wikidocs.net/16468)
+
+- [위키 독스 - 객체지향 프로그램의 이해](https://wikidocs.net/16469)
+
+- [블로그 참고 - 코딩팩토리(C++ 가상함수(virtual) 사용법 총정리)](https://coding-factory.tistory.com/699)

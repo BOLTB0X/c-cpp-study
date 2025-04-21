@@ -51,11 +51,61 @@ private:
     void igniteEngine();
 };
 
+class Animal {
+public:
+    virtual void eat(void) { 
+        cout << "먹는 중\n"; 
+    }
+};
+    
+class Dog : public Animal {
+public:
+
+    void eat(void) override {
+        cout << "우걱우걱 " << "먹는 중\n"; 
+    }
+    void bark(void) { 
+        cout << "멍멍!\n"; 
+    }
+};
+
+class Printer {
+public:
+    void print(int num) {
+        cout << "정수: " << num << endl;
+    }
+        
+    void print(double num) {
+        cout << "실수: " << num << endl;
+    }
+    
+    void print(string text, int count) {
+        for (int i = 0; i < count; i++) {
+            cout << "문자열: " << text << endl;
+        }
+    }
+};
+
 int main(void) {
     MyClass obj;
     // obj.a = 1; x
     // obj.b = 2; x
     // obj.c = 3; x
     obj.d = 4;
+
+    Dog dog;
+
+    //dog.eat(); // 먹는 중
+    dog.bark(); //  멍멍!
+
+
+    Printer printer;
+
+    printer.print(2); // 정수: 2
+    printer.print(2.5); // 실수: 2.5
+    printer.print("Two", 1); // 문자열: Two
+
+    dog.eat(); // 우걱우걱 먹는 중
+
     return 0;
 }
