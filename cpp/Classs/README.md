@@ -23,6 +23,8 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - 객체 지향 프로그래밍의 4가지 특징 -> **추상화** , **상속** , **다형성** , **캡슐화**
 
+- [OOP 관련 Study](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/CLasss02)
+
 ## 클래스(Class)
 
 
@@ -60,7 +62,7 @@ public:
 
 - 멤버 함수 : Class 내부의 메서드
 
-- 접근 지정자
+- **접근 지정자**
 
    - `public` : 어디서든 접근 가능
 
@@ -88,7 +90,7 @@ p.introduce(); // Hi, I'm B0X and I'm 55 years old.
 
 > 객체가 생성될 때 자동으로 호출되는 특별한 메서드
 
-1. 매개변수 있는 생성자
+1. **매개변수 있는 생성자**
    
    ```cpp
    class Person {
@@ -121,9 +123,9 @@ p.introduce(); // Hi, I'm B0X and I'm 55 years old.
 
    - 자동 호출, 객체 생성 시 자동 실행됨
 
-   <br/>
+   ---
 
-2. 생성자 오버로딩
+2. **생성자 오버로딩**
 
    ```cpp
    class Dog
@@ -170,9 +172,9 @@ p.introduce(); // Hi, I'm B0X and I'm 55 years old.
 
    - 오버로딩 가능, 여러 개 생성자 정의 가능 (매개변수 다르게)
 
-   <br/>
+   ---
 
-3. 초기화 리스트
+3. **초기화 리스트**
 
    ```cpp
    class Student {
@@ -200,9 +202,10 @@ p.introduce(); // Hi, I'm B0X and I'm 55 years old.
        }
    };
    ```
-   <br/>
    
-4. 디폴트 생성자(Default Constructor)
+   ---
+   
+4. **디폴트 생성자(Default Constructor)**
 
    ```cpp
    class Book
@@ -215,7 +218,7 @@ p.introduce(); // Hi, I'm B0X and I'm 55 years old.
    };
    ```
 
-   <br/>
+   ---
 
 ## 소멸자(Destructor)
 
@@ -234,11 +237,11 @@ public:
 
 - 주로 동적 메모리 해제나 리소스 정리 작업을 할 때 사용
 
--  `~`(틸드)를 붙이면 소멸자(Destructor)
+- `~`(틸드)를 붙이면 소멸자(Destructor)
 
 - 클래스당 하나만 정의 가능
 
-<br/>
+---
 
 1. ex
 
@@ -261,7 +264,7 @@ public:
    // 소멸자 호출!
    ```
 
-   <br/>
+   ---
 
 2. 소멸자가 호출되는 상황
 
@@ -271,7 +274,7 @@ public:
 
    - 프로그램 종료 시 : 전역 객체나 정적 객체가 종료 시 소멸
 
-   <br/>
+   ---
 
 3. 동적 할당 ex
 
@@ -291,8 +294,6 @@ public:
        }
    };
    ```
-
-   <br/>
 
 ## 참고
 
