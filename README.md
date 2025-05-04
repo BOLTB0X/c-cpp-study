@@ -33,4 +33,4 @@
 
 - [Class](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs)
 
-- [Class - OOP](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs)
+   - [OOP](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/CLasss02)
