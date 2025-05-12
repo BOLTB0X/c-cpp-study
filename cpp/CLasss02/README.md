@@ -169,7 +169,7 @@
 
    ---
 
-3. 자세한 것은 [추상 클래스 (**Abstract Class**) 와 순수 가상 함수 TODO]()
+3. 자세한 것은 [추상 클래스 (**Abstract Class**) 와 순수 가상 함수](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs03#abstract-class) 참조
 
 ## 상속 (Inheritance)
 
