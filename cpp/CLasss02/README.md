@@ -93,6 +93,8 @@
    obj.d = 4;
    ```
 
+   ---
+
 ## 캡슐화의 관계
 
 - `private`
@@ -171,6 +173,8 @@
 
 3. 자세한 것은 [추상 클래스 (**Abstract Class**) 와 순수 가상 함수](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs03#abstract-class) 참조
 
+   ---
+
 ## 상속 (Inheritance)
 
 > 기존 클래스를 바탕으로 새로운 클래스를 만드는 것
@@ -213,7 +217,7 @@ dog.bark(); //  멍멍!
 
 - 코드 재사용 + 확장성 향상
 
-- 자세한 것은 [상속 (Inheritance) TODO]() 참고
+- 자세한 것은 [상속 (Inheritance)](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs03#inheritance) 참고
 
 ## 다형성 (Polymorphism)
 
@@ -222,6 +226,7 @@ dog.bark(); //  멍멍!
 - 객체 지향 프로그래밍의 꽃
 
 - 같은 함수가 상황에 따라 다르게 동작
+
 
 1. **메서드 오버로딩 (Method Overloading)**
 
@@ -284,6 +289,8 @@ dog.bark(); //  멍멍!
 
       - 부모의 메서드를 자식이 자기 방식대로 바꿔 쓰는 것
 
+      ---
+
     - ex
 
        ```cpp
@@ -312,7 +319,9 @@ dog.bark(); //  멍멍!
 
    ---
 
-3. 자세한 것은 [메서드 오버라이딩과 메서드 오버로딩 TODO]()
+3. 자세한 것은 [메서드 오버라이딩과 메서드 오버로딩](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Classs03#method-overloading%EA%B3%BC-method-overriding)
+
+   ---
 
 ## 참고
 
