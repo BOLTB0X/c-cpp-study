@@ -4,6 +4,8 @@
 
 ## C
 
+- [Dynamic Allocation(malloc, calloc, realloc)](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/dynamic%20allocation)
+
 - [Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer1)
 
    - [Pointer & Array](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer2)
@@ -30,10 +32,11 @@
 
    ---
 
-
 ## C++
 
 - [namespace](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/namespace)
+
+- [Dynamic Allocation(new, delete)](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Dynamic%20allocation)
   
 - [lambda](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/lambdaa)
 
@@ -51,4 +54,6 @@
 
    ---
 
-- [Smart Pointer]()
+- [RAII(Resource Acquisition Is Initialization)](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/RAII)
+
+- [Smart Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Smart%20Pointer)
