@@ -278,3 +278,229 @@ std::vector<Mesh> meshes;
 **즉, 하나의 객체가 Stack과 Heap 양쪽의 메모리와 연관될 수 있는 것**
 
 그리고 `commandList`는 포인터 자체와 실제로 가리키는 객체의 수명을 구분해야 함
+
+---
+
+## 5. Object Lifetime
+
+> C++에서 객체는 생성되는 순간부터 소멸되는 순간까지 유효한 수명을 가지ㅁ
+
+이 기간을 Object Lifetime(객체 생명주기) 이라고 함
+
+### 5.1 ex) code
+
+```cpp
+class Texture
+{
+public:
+    Texture()
+    {
+        std::cout << "Texture Created\n";
+    }
+
+    ~Texture()
+    {
+        std::cout << "Texture Destroyed\n";
+    }
+};
+
+void Render()
+{
+    Texture texture;
+}
+```
+
+### 5.2 `Texture` 객체의 생명주기
+
+1. 객체 생성
+   
+   `Texture texture;`
+   
+   생성자 호출 및 객체 수명 시작
+
+2. 객체 사용
+   
+   `Render()` 함수 내부에서 객체 사용
+
+3. Scope 종료
+   
+   `Render()` 함수가 반환됨
+
+4. 객체 소멸
+   
+   소멸자 호출 및 객체 수명 종료
+
+여기서 중요한 것은
+
+- **생성자(Constructor)** : 객체가 올바른 상태로 사용될 수 있도록 초기화
+- **소멸자(Destructor)** : 객체가 소유한 자원을 정리하고 객체 수명을 마무리
+
+단순히 메모리 공간을 확보하고 해제하는 것만이 아닌, 객체가 가진 자원까지 관리하는 것이 C++ 객체 모델의 핵심
+
+### 5.3 동적 객체의 생명주기
+
+```cpp
+void Render()
+{
+    Texture* texture = new Texture();
+
+    // Texture 사용
+
+    delete texture;
+}
+```
+
+이 경우 객체의 수명은 함수의 Scope와 직접적으로 연결되지 않음
+
+`Render()` 함수가 종료되기 전이라도 delete를 호출하면 객체는 소멸
+
+반대로 함수가 종료되어도 delete를 호출하지 않았다면 객체는 계속 존재할 수 있음
+
+즉, **객체의 수명은 저장 영역만으로 결정되는 것이 아니라 객체의 저장 기간과 생성·소멸 규칙에 따라 결정**
+
+---
+
+## 6. Scope와 Lifetime의 차이
+
+| 개념 | 의미 |
+| :--- | :--- |
+| Scope | 변수나 이름을 코드에서 참조할 수 있는 범위 |
+| Lifetime | 객체가 실제로 존재하는 기간 |
+
+```cpp
+Texture* CreateTexture()
+{
+    Texture* texture = new Texture();
+
+    return texture;
+}
+
+void Render()
+{
+    Texture* texture = CreateTexture();
+
+    // Texture 객체 사용 가능
+
+    delete texture;
+}
+```
+
+`CreateTexture()` 내부의 포인터 변수 `texture`는 함수가 종료되면 **Scope** 가 끝남
+
+**`CreateTexture()` 실행부터 반환 이후까지**
+
+* **지역 포인터 변수**: `CreateTexture()` 함수가 끝나면 수명 종료
+* **동적 Texture 객체**: `CreateTexture()` 반환 후에도 존재하며 `delete` 시 소멸
+
+---
+
+## 7. Dangling Pointer
+
+<p align="center">
+  <img width="400" height="200" alt="" src="Gemini_Generated_Image_pvl69opvl69opvl6.png" />
+  <br/> AI 생성 이미지, cf: https://yanxurui.cc/posts/misc/2019-05-01-Computer-Security-Overview/
+</p>
+
+**이미 수명이 끝난 객체의 메모리를 여전히 가리키고 있는 포인터**
+
+### 7.1 코드가 문제인 이유
+
+```cpp
+int* CreateValue()
+{
+    int value = 100;
+
+    return &value;
+}
+
+int main()
+{
+    int* ptr = CreateValue();
+
+    std::cout << *ptr;
+
+    return 0;
+}
+```
+
+
+`CreateValue()` 내부의 value는 지역 변수
+
+1. `value` 생성
+2. `value`에 100 저장
+3. `&value` 반환
+4. 함수 종료
+5. `value`의 수명 종료
+6. `ptr`은 이미 수명이 끝난 객체의 주소를 보유
+
+결국 `ptr`은 유효한 객체를 가리키지 않음
+
+이 상태에서 `*ptr로` 접근하면 Undefined Behavior(정의되지 않은 동작) 가 발생
+
+### 7.2 Dangling Pointer가 발생하는 대표적인 상황 
+
+#### 1) 지역 변수의 주소 반환
+
+```cpp
+int* GetValue()
+{
+    int value = 10;
+    return &value;
+}
+```
+
+지역 객체의 수명이 함수 종료와 함께 끝나기 때문
+
+#### 2) 이미 해제된 메모리 접근
+
+```cpp
+int* ptr = new int(100);
+
+delete ptr;
+
+std::cout << *ptr; // 잘못된 접근
+```
+
+#### 3) 객체가 먼저 소멸한 경우
+
+```cpp
+Texture* ptr = nullptr;
+
+{
+    Texture texture;
+    ptr = &texture;
+}
+
+// texture 소멸
+
+// ptr은 더 이상 유효한 객체를 가리키지 않음
+```
+
+### 7.3 `nullptr` 을 대입하면 해결될까?
+
+```cpp
+delete ptr;
+ptr = nullptr;
+```
+
+해당 포인터 변수를 더 이상 사용하지 않도록 만드는 좋은 습관임
+
+하지만 주의해야 case가 존재
+
+```cpp
+int* ptrA = new int(100);
+int* ptrB = ptrA;
+
+delete ptrA;
+ptrA = nullptr;
+```
+
+`ptrA` 는 안전하게 초기화됐지만 `ptrB` 는 여전히 해제된 메모리 주소를 가지고 있음
+
+#### 하나의 객체를 여러 포인터가 가리키는 상황
+
+* **동적 객체**: `delete`로 수명 종료
+* **`ptrA`** → `nullptr`
+* **`ptrB`** → Dangling
+
+> 포인터 하나를 `nullptr`로 초기화해도 다른 포인터까지 자동으로 변경되지는 않음
