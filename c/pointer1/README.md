@@ -16,19 +16,17 @@
 
 <div style="text-align: center;">
 
-![위키피디아](https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Virtual_address_space_and_physical_address_space_relationship.svg/1280px-Virtual_address_space_and_physical_address_space_relationship.svg.png)
-<br/>
-이미지 출처: 위키피디아
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Virtual_address_space_and_physical_address_space_relationship.svg/1280px-Virtual_address_space_and_physical_address_space_relationship.svg.png" width="700" style="border:1px solid #ddd; border-radius:4px;" />
+
+   <br/>
+   이미지 출처: 위키피디아
 </div>
 
 - 변수가 할당된 메모리 공간의 시작 주소
-  <br/>
 
 - 변수가 선언되면 그 변수타입 크기만큼 메모리 할당
-  <br/>
 
 - 주소 연산자 `&` 으로 출력시 시작 주소가 나옴
-  <br/>
 
 <div style="text-align: center;">
 
@@ -51,8 +49,6 @@
    // p는 a가 저장된 메모리 주소를 가리키게 됌
    ```
 
-   <br/>
-
 2. 사용
 
    ```c
@@ -65,13 +61,10 @@
    printf("%p\n", (void *)p); // 변수 a의 메모리 주소
    ```
 
-   <br/>
-
 3. 정리
 
    - `p` -> 포인터 변수 자체의 값, 즉 메모리 주소
    - `*p` -> 포인터가 가리키는 메모리 주소에 저장된 값
-     <br/>
 
 4. 전체 코드
    ```c
@@ -84,7 +77,6 @@
        return 0;
    }
    ```
-   <br/>
 
 ## Pointer 대입의 차이
 
@@ -104,7 +96,6 @@
    ```
 
    포인터 변수가 **주소 값** 을 기억함
-   <br/>
 
 2. 포인터 변수 = 값
 
@@ -114,7 +105,6 @@
    ```
 
    실제 메모리 값 변경
-   <br/>
 
 3. 포인터 1 = 포인터 2
 
@@ -132,7 +122,6 @@
    ```
 
    포인터 값은 변경되나 원본은 변경 X
-   <br/>
 
 4. *포인터 1 = *포인터 2
 

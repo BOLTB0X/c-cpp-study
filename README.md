@@ -1,36 +1,35 @@
 # c-cpp-study
 
-![열공](https://instablank.com/files/jjalbox/2020/10/20201012_5f840abf42fb1.gif)
+
+<div align="center">
+  <img src="https://i.namu.wiki/i/E0GVYzC50pTcWERUz4qotdTGBWfiuWQHBoGo_L_UhZIWsroNalgVjpGY2TO0EZS_tJPENjteZkhk4vUMGs-eJxAbI5akG720bvW2SI1bFHalvrVovsSVJiAbVly0QJNRjABo-0YnB5P2XDFyocVJpg.webp" width="700" style="border:1px solid #ddd; border-radius:4px;" />
+  <br>
+</div>
+
+## Commonness
+
+- [Memory](https://github.com/BOLTB0X/c-cpp-study/tree/main/cpp/Memory)
+
+- [Pointer Basic](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer1)
+
+   - [Pointer & Array](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer2)
+
+   - [Double Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer3)
+
 
 ## C
 
 - [Dynamic Allocation(malloc, calloc, realloc)](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/dynamic%20allocation)
 
-- [Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer1)
-
-   - [Pointer & Array](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer2)
-
-   - [Function Pointer 정의](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/function%20Pointer1)
-
-   - [Function Pointer 활용](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/function%20Pointer2)
-
-   - [Double Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/pointer3)
-
-   ---
-
 - [인자 전달(Argument passing)](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/argument-passing)
 
    - [Array를 함수 인자로 전달](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Array-argument-functiong)
-
-   ---
 
 - [I/O, Stream, FILE](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/File)
 
 - [Strcut](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Struct)
 
    - [Struct Pointer](https://github.com/BOLTB0X/c-cpp-study/tree/main/c/Struct-Pointer#struct-pointer)
-
-   ---
 
 ## C++
 

@@ -1,7 +1,7 @@
 # Memory
 
 <p align="center">
-  <img width="500" height="300" alt="" src="Gemini_Generated_Image_81qoyz81qoyz81qo.png" />
+  <img width="700" height="400" alt="" src="Gemini_Generated_Image_81qoyz81qoyz81qo.png" />
   <br/> 표 내용을 바탕으로 AI 생성 이미지
 </p>
 
@@ -25,7 +25,7 @@
 ## 1. Stack Memory
 
 <p align="center">
-  <img width="400" height="200" alt="" src="Gemini_Generated_Image_8kas718kas718kas.png" />
+  <img width="600" height="300" alt="" src="Gemini_Generated_Image_8kas718kas718kas.png" />
   <br/> AI 생성 이미지, cf: https://yanxurui.cc/posts/misc/2019-05-01-Computer-Security-Overview/
 </p>
 
@@ -114,7 +114,7 @@ Stack은 크기가 제한적이기 때문에, 허용된 용량을 넘기면 프�
 ## 2. Heap Memory
 
 <p align="center">
-  <img width="400" height="200" alt="" src="Gemini_Generated_Image_xp42hzxp42hzxp42.png" />
+  <img width="600" height="300" alt="" src="Gemini_Generated_Image_xp42hzxp42hzxp42.png" />
   <br/> AI 생성 이미지, cf: https://yanxurui.cc/posts/misc/2019-05-01-Computer-Security-Overview/
 </p>
 
@@ -164,7 +164,7 @@ int main()
    - 반환된 주소를 Stack에 있는 number에 저장함
 
    <p align="center">
-   <img width="300" height="150" alt="" src="Gemini_Generated_Image_si7scisi7scisi7s.png" />
+   <img width="500" height="250" alt="" src="Gemini_Generated_Image_si7scisi7scisi7s.png" />
    </p>
 
 3. Heap 메모리 해제
@@ -397,7 +397,7 @@ void Render()
 ## 7. Dangling Pointer
 
 <p align="center">
-  <img width="400" height="200" alt="" src="Gemini_Generated_Image_pvl69opvl69opvl6.png" />
+  <img width="600" height="300" alt="" src="Gemini_Generated_Image_pvl69opvl69opvl6.png" />
   <br/> AI 생성 이미지, cf: https://yanxurui.cc/posts/misc/2019-05-01-Computer-Security-Overview/
 </p>
 
