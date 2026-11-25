@@ -2,7 +2,8 @@
 
 
 <div align="center">
-  <img src="https://i.namu.wiki/i/E0GVYzC50pTcWERUz4qotdTGBWfiuWQHBoGo_L_UhZIWsroNalgVjpGY2TO0EZS_tJPENjteZkhk4vUMGs-eJxAbI5akG720bvW2SI1bFHalvrVovsSVJiAbVly0QJNRjABo-0YnB5P2XDFyocVJpg.webp" width="700" style="border:1px solid #ddd; border-radius:4px;" />
+
+   <img src="./basicProblem/hoist a boulder.png" alt="Example Image" width="80%">
   <br>
 </div>
 

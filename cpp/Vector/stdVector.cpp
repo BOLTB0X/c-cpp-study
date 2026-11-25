@@ -3,6 +3,26 @@
 
 void print_vector(std::vector<int> v);
 
+class Monster {
+public:
+    Monster(int hp)
+        : hp(hp) {
+        std::cout << "Constructor" << '\n';
+    }
+
+    ~Monster() {
+        std::cout << "Destructor" << '\n';
+    }
+
+    Monster(Monster&& other) noexcept
+        : hp(other.hp) {
+        std::cout << "Move Constructor" << '\n';
+    }
+
+private:
+    int hp;
+};
+
 int main(void) {
     std::vector<int> v;
 
@@ -79,6 +99,34 @@ int main(void) {
         std::cout << *it << " ";
     }
     std::cout << "\n";
+
+    std::vector<Monster> monsters;
+
+    Monster monster(100);
+
+    monsters.push_back(monster);
+
+    monsters.push_back(std::move(monster));
+
+    std::vector<int>::iterator iter = v.begin();
+
+    std::cout << *iter << '\n';
+
+    v.clear();
+
+    v.reserve(3);
+    v = {10, 20, 30};
+    auto iter2 = v.begin();
+
+    v.push_back(40);
+
+    //std::cout << *iter2 << '\n'; // 잘못된 접근
+
+    std::vector<int> numbers = {10, 20, 30, 40, 50};
+
+    auto iter3 = numbers.begin() + 2;
+
+    numbers.insert(numbers.begin() + 1, 15);
 
     return 0;
 }
