@@ -122,7 +122,7 @@ void Render(const Camera& camera);
 선언은 다음 의미를 가짐
 
 - `Camera` 객체를 복사하지 않고 참조한다.
-- 함수 내부에서 `Camer` `를 수정할 수 없다.
+- 함수 내부에서 `Camera` 를 수정할 수 없다.
 - 원본 객체를 읽기 위한 용도로 사용한다.
 
 ```cpp
