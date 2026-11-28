@@ -1,4 +1,4 @@
-# Vector
+# std::vector
 
 > `std::vector`는 **동적 배열(Dynamic Array)** 을 구현한 C++ 표준 컨테이너
 
